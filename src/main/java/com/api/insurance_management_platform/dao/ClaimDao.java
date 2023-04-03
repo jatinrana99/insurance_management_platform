@@ -1,5 +1,5 @@
 package com.api.insurance_management_platform.dao;
 
-public class CalimDao {
+public class ClaimDao {
     
 }
