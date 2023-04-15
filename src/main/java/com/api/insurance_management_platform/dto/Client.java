@@ -1,6 +1,5 @@
 package com.api.insurance_management_platform.dto;
 
-import java.text.DateFormat;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -15,7 +14,7 @@ public class Client {
     private String clientName;
     private long clientContact;
     private String clientAddress;
-    private DateFormat clientDOB;
+    private String clientDOB;
 
     @ManyToMany
     private List<Insurance_Policy> insurance_Policies;
@@ -52,11 +51,11 @@ public class Client {
         this.clientAddress = clientAddress;
     }
 
-    public DateFormat getClientDOB() {
+    public String getClientDOB() {
         return clientDOB;
     }
 
-    public void setClientDOB(DateFormat clientDOB) {
+    public void setClientDOB(String clientDOB) {
         this.clientDOB = clientDOB;
     }
 

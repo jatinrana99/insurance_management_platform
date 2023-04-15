@@ -1,6 +1,5 @@
 package com.api.insurance_management_platform.dto;
 
-import java.text.DateFormat;
 import java.util.List;
 
 import jakarta.persistence.Entity;
@@ -15,8 +14,8 @@ public class Insurance_Policy {
     private int policyNumber;
     private String policyType;
     private double policyCoverageAmount;
-    private DateFormat policyStartDate;
-    private DateFormat policyEndDate;
+    private String policyStartDate;
+    private String policyEndDate;
     private double policyPremimum;
 
     @ManyToMany
@@ -65,19 +64,19 @@ public class Insurance_Policy {
         this.policyCoverageAmount = policyCoverageAmount;
     }
 
-    public DateFormat getPolicyStartDate() {
+    public String getPolicyStartDate() {
         return policyStartDate;
     }
 
-    public void setPolicyStartDate(DateFormat policyStartDate) {
+    public void setPolicyStartDate(String policyStartDate) {
         this.policyStartDate = policyStartDate;
     }
 
-    public DateFormat getPolicyEndDate() {
+    public String getPolicyEndDate() {
         return policyEndDate;
     }
 
-    public void setPolicyEndDate(DateFormat policyEndDate) {
+    public void setPolicyEndDate(String policyEndDate) {
         this.policyEndDate = policyEndDate;
     }
 

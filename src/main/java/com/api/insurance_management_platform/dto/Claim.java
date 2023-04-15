@@ -1,7 +1,5 @@
 package com.api.insurance_management_platform.dto;
 
-import java.text.DateFormat;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
@@ -11,7 +9,7 @@ public class Claim {
 
     @Id
     private int claimNumber;
-    private DateFormat claimDate;
+    private String claimDate;
     private String claimStatus;
     private String claimDescription;
 
@@ -34,11 +32,11 @@ public class Claim {
         this.claimNumber = claimNumber;
     }
 
-    public DateFormat getClaimDate() {
+    public String getClaimDate() {
         return claimDate;
     }
 
-    public void setClaimDate(DateFormat claimDate) {
+    public void setClaimDate(String claimDate) {
         this.claimDate = claimDate;
     }
 

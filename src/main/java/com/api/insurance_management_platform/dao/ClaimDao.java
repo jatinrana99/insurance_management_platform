@@ -16,8 +16,11 @@ public class ClaimDao {
 
     // insert claim------------------------------------------------------------------------------------------------------------------------------------------------------------------  
     public Claim insertClaim(Claim claim) {
+        if (claim.getInsurance_Policy().getPolicyNumber()>0){
         claimRepository.save(claim);
         return claim;
+        }
+        return null;
     }
 
     // update claim----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -25,6 +28,7 @@ public class ClaimDao {
         if(claimRepository.findById(claimId).isPresent()){
            Claim dbClaim =  claimRepository.findById(claimId).get();
            if(dbClaim.getClaimNumber() == claim.getClaimNumber()){
+            // to check if user pass claim no. is equal to database claim no.
            if(claim.getClaimStatus()!=null && dbClaim.getClaimStatus() != claim.getClaimStatus()){
             dbClaim.setClaimStatus(claim.getClaimStatus());
            }
